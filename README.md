@@ -1,5 +1,4 @@
 
-
 ## Overview
 
 This project demonstrates how Microsoft Sentinel Workbooks can visualize security events geographically using Azure logs.
@@ -119,3 +118,8 @@ These detection strategies help security teams respond quickly to potential thre
 - Microsoft Sentinel
 - Azure Log Analytics
 - KQL Queries
+
+## Author
+
+Tylesha Alexander 
+Cybersecurity | Threat Hunting | Cloud Security
