@@ -100,6 +100,65 @@ Based on the observed activity, the following detections could be implemented:
 These detection strategies help security teams respond quickly to potential threats within cloud environments.
 
 
+## Threat Hunt Case Study
+
+### Objective
+
+The objective of this threat hunt was to analyze authentication and network activity within a Microsoft Sentinel environment to identify potential indicators of malicious activity.
+
+Using Azure Sentinel workbooks, geographic visualizations were created to better understand where authentication attempts and inbound traffic originated.
+
+---
+
+### Hypothesis
+
+If malicious actors are attempting to access cloud resources, we may observe:
+
+- Multiple authentication failures from the same geographic region
+- Login attempts from unusual locations
+- Authentication activity from known cloud hosting providers
+- Failed login attempts targeting exposed virtual machines
+
+---
+
+### Investigation Steps
+
+1. Analyzed **Entra ID Sign-in Logs** for successful and failed authentication events.
+2. Visualized login locations using **Microsoft Sentinel Workbook map visualizations**.
+3. Investigated clusters of login failures originating from similar geographic regions.
+4. Reviewed **VM authentication failures** to detect possible brute-force attempts.
+5. Examined inbound traffic patterns to identify potential malicious scanning activity.
+
+---
+
+### Findings
+
+The investigation revealed several patterns:
+
+- Multiple login attempts originating from geographically distant locations.
+- Clusters of authentication failures suggesting automated login attempts.
+- Repeated login attempts targeting cloud infrastructure services.
+
+These patterns may indicate reconnaissance activity or automated authentication attacks.
+
+---
+
+### Response Recommendations
+
+Based on the findings, security teams could implement the following actions:
+
+- Enable **Conditional Access policies** to block high-risk locations.
+- Implement **Multi-Factor Authentication (MFA)** for all user accounts.
+- Monitor repeated login failures and generate automated alerts.
+- Restrict administrative access to trusted geographic regions.
+
+---
+
+### Outcome
+
+This threat hunt demonstrates how Microsoft Sentinel workbooks and KQL queries can be used to transform raw log data into meaningful visual insights. Geographic visualizations help analysts quickly identify suspicious activity patterns and investigate potential threats affecting cloud environments.
+
+
 
 ## Skills Demonstrated
 
